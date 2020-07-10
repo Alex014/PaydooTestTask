@@ -1,8 +1,8 @@
 {
     "name": "alex014/paydoo_test_task",
     "description": "Paydoo test task",
-    "type": "dev",
-    "version": "1.0",
+    "type": "library",
+    "version": 1.0.0,
     "license": "none",
     "authors": [
         {
@@ -11,6 +11,11 @@
         }
     ],
     "require": {
+        "aura/sql": "^3.0",
+        "psr/http-client": "^1.0",
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
         "aura/sql": "^3.0",
         "psr/http-client": "^1.0",
         "psr/http-message": "^1.0"
