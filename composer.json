@@ -1,7 +1,8 @@
 {
     "name": "alex014/paydoo_test_task",
     "description": "Paydoo test task",
-    "type": "test",
+    "type": "dev",
+    "version": "1.0",
     "license": "none",
     "authors": [
         {
