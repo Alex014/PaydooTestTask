@@ -1,5 +1,5 @@
 {
-    "name": "paydoo/paydoo_test_lib",
+    "name": "paydoo_test_task",
     "description": "Paydoo test task",
     "type": "library",
     "version": "1.0.0",
