@@ -10,10 +10,12 @@ class transactions extends baseModel {
         $products = array_map(function($product) use ($pdo) {
             return $pdo->quote($product);
         }, $products);
+        $products = ', '. implode(',', $products);
         
         $merchants = array_map(function($merchant) use ($pdo) {
             return $pdo->quote($merchant);
         }, $merchants);
+        $merchants = ', '. implode(',', $merchants);
         
         $stm = 'SELECT T.id, '
                 . ' P.name AS product, '
@@ -27,8 +29,8 @@ class transactions extends baseModel {
                 . 'INNER JOIN currency C2 ON (T.from_currency_id = C2.id) '
                 . 'INNER JOIN merchants M ON (T.merchant_id = M.id) '
                 . 'WHERE T.`date` BETWEEN :from AND :to '
-                . '  AND P.name IN ('. implode(',', $products).') '
-                . '  AND M.name IN ('. implode(',', $merchants).') '
+                . '  AND P.name IN (0 '.$products.') '
+                . '  AND M.name IN (0 '.$merchants.') '
                 . 'ORDER BY T.`date` DESC ';
 
         

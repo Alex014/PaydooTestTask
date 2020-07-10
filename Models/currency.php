@@ -13,7 +13,7 @@ class currency extends baseModel {
     {
         $stm = 'INSERT INTO `rate` ( base_currency_id, currency_id, rate) '
                 . 'VALUES (:curr_to, :curr_from, :rate )';
-        return $this->pdo->perform($stm, ['curr_from'=> $from_cur, 'curr_to'=> $to_cur]);
+        return $this->pdo->perform($stm, ['curr_from'=> $from_cur, 'curr_to'=> $to_cur, 'rate' => $rate]);
     }
     
     public function getRate($from_cur, $to_cur) 
