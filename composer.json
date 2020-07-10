@@ -2,7 +2,7 @@
     "name": "alex014/paydoo_test_task",
     "description": "Paydoo test task",
     "type": "library",
-    "version": 1.0.0,
+    "version": "1.0.0",
     "license": "none",
     "authors": [
         {
